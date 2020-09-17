@@ -57,7 +57,10 @@ export default class Tasks extends Component {
 
   render() {
     return (
-      <Navbar>
+      <React.Fragment>
+      <Navbar/>
+
+      <div className="container pt-3">
 
           {/* loading text */}
         {this.state.taskList.length === 0 ? (
@@ -90,7 +93,9 @@ export default class Tasks extends Component {
             ))}
         </div>
 
-      </Navbar>
+        </div>
+
+      </React.Fragment>
     );
   }
 }

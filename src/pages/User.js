@@ -23,11 +23,12 @@ export default class User extends Component {
 
     render() {
         return (
-            <Navbar>
+            <React.Fragment>
+            <Navbar/>
 
-                <div className="py-5">
+                <div className="container pt-3">
 
-                <h4 className="mb-4">Username : Mr. React</h4>
+                <h4 className="my-4">Username : Mr. Dummy React</h4>
 
                     {
                         this.state.edit ? (
@@ -37,9 +38,7 @@ export default class User extends Component {
                         )
                     }
 
-                </div>
-
-                <div className="pt-5">
+                <div className="pt-5 mt-4">
                     <button className="btn btn-outline-dark mr-3" onClick={this.funSetEdit}>
                         {
                             this.state.edit ? "Save Password" : "Change Password"
@@ -47,8 +46,10 @@ export default class User extends Component {
                     </button>
                     <button className="btn btn-outline-dark" onClick={this.funLogOut}>Logout</button>
                 </div>
+
+                </div>
                 
-            </Navbar>
+            </React.Fragment>
         )
     }
 }
